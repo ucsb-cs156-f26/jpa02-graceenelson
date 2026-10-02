@@ -22,9 +22,7 @@ public class DeveloperTest {
 
     @Test
     public void getName_returns_correct_name() {
-        // TODO: Replace Chris G. with your name as shown on
-        // <https://bit.ly/cs156-f26-teams>
-        assertEquals("Grace Nelson", Developer.getName());
+        assertEquals("Grace", Developer.getName());
     }
 
     // TODO: Add additional tests as needed to get to 100% jacoco line coverage, and
@@ -34,4 +32,47 @@ public class DeveloperTest {
     public void getGithubId_returns_correct_githubId() {
         assertEquals("graceenelson", Developer.getGithubId());
     }
+
+    @Test
+    public void getTeam_returns_team_with_correct_name() {
+        Team t = Developer.getTeam();
+        assertEquals("f26-15", t.getName());
+    }
+
+    @Test
+    public void getTeam_returns_team_with_Grace() {
+        Team t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Grace"), "Team should contain Grace");
+    }
+
+    @Test
+    public void getTeam_returns_team_with_Chi() {
+        Team t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Chi"), "Team should contain Chi");
+    }
+
+    @Test
+    public void getTeam_returns_team_with_Leo() {
+        Team t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Leo"), "Team should contain Leo");
+    }
+
+    @Test
+    public void getTeam_returns_team_with_Haasini() {
+        Team t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Haasini"), "Team should contain Haasini");
+    }
+
+    @Test
+    public void getTeam_returns_team_with_Siddharth() {
+        Team t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Siddharth"), "Team should contain Siddharth");
+    }
+
+    @Test
+    public void getTeam_returns_team_with_Roland() {
+        Team t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Roland"), "Team should contain Roland");
+    }
+
 }
